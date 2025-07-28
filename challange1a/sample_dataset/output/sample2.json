@@ -1,0 +1,50 @@
+{
+  "title": "Adobe Technical Report",
+  "outline": [
+    {
+      "level": "H1",
+      "text": "EXECUTIVE SUMMARY",
+      "page": 1
+    },
+    {
+      "level": "H1",
+      "text": "BACKGROUND",
+      "page": 2
+    },
+    {
+      "level": "H2",
+      "text": "Technical Overview",
+      "page": 3
+    },
+    {
+      "level": "H2",
+      "text": "System Requirements",
+      "page": 4
+    },
+    {
+      "level": "H1",
+      "text": "IMPLEMENTATION",
+      "page": 5
+    },
+    {
+      "level": "H2",
+      "text": "Architecture Design",
+      "page": 6
+    },
+    {
+      "level": "H3",
+      "text": "Component Details",
+      "page": 7
+    },
+    {
+      "level": "H2",
+      "text": "Performance Metrics",
+      "page": 8
+    },
+    {
+      "level": "H1",
+      "text": "CONCLUSIONS",
+      "page": 9
+    }
+  ]
+}

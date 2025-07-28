@@ -1,0 +1,45 @@
+{
+  "title": "Sample PDF Document",
+  "outline": [
+    {
+      "level": "H1",
+      "text": "1. Introduction",
+      "page": 1
+    },
+    {
+      "level": "H2",
+      "text": "1.1 Background",
+      "page": 2
+    },
+    {
+      "level": "H2",
+      "text": "1.2 Objectives",
+      "page": 3
+    },
+    {
+      "level": "H1",
+      "text": "2. Methodology",
+      "page": 4
+    },
+    {
+      "level": "H2",
+      "text": "2.1 Data Collection",
+      "page": 5
+    },
+    {
+      "level": "H3",
+      "text": "2.1.1 Sampling",
+      "page": 6
+    },
+    {
+      "level": "H1",
+      "text": "3. Results",
+      "page": 7
+    },
+    {
+      "level": "H1",
+      "text": "4. Conclusions",
+      "page": 10
+    }
+  ]
+}
