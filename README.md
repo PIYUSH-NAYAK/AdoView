@@ -18,29 +18,36 @@ This is a solution for Challenge 1a of the Adobe India Hackathon 2025. The chall
 
 ```
 AdoView/
-├── challange1a/
-│   └── sample_dataset/
-│       ├── output/                # Generated output files
-│       ├── pdfs/                  # Sample PDF files
-│       └── schema/                # JSON schema for output format
-│           └── output_schema.json
-├── Dockerfile                     # Container configuration
 ├── README.md                      # This file
-├── process_pdf.py                # Main processing script
-└── requirements.txt              # Python dependencies
+└── challange1a/
+    ├── Dockerfile                 # Container configuration
+    ├── process_pdf.py             # Main processing script
+    ├── requirements.txt           # Python dependencies
+    ├── output/                    # Generated output files
+    │   ├── file01.json
+    │   ├── file02.json
+    │   ├── file03.json
+    │   └── file04.json
+    └── sample_dataset/
+        ├── output/                # Sample output files
+        ├── pdfs/                  # Sample PDF files
+        └── schema/                # JSON schema for output format
+            └── output_schema.json
 ```
 
 ## Official Challenge Requirements
 
 ### Build Command
 ```bash
+cd challange1a
 docker build --platform linux/amd64 -t adoview.pdfprocessor .
 ```
 
 ### Run Command
 ```bash
+cd challange1a
 docker run --rm \
-  -v $(pwd)/challange1a/sample_dataset/pdfs:/app/input:ro \
+  -v $(pwd)/sample_dataset/pdfs:/app/input:ro \
   -v $(pwd)/output:/app/output \
   --network none \
   adoview.pdfprocessor
@@ -81,11 +88,12 @@ The extractor produces JSON files with the following schema:
 
 ```bash
 # Build the container
+cd challange1a
 docker build --platform linux/amd64 -t adoview.pdfprocessor .
 
 # Run the container (batch processing)
 docker run --rm \
-  -v $(pwd)/challange1a/sample_dataset/pdfs:/app/input:ro \
+  -v $(pwd)/sample_dataset/pdfs:/app/input:ro \
   -v $(pwd)/output:/app/output \
   --network none \
   adoview.pdfprocessor
@@ -95,6 +103,7 @@ docker run --rm \
 
 ```bash
 # Install dependencies
+cd challange1a
 pip install -r requirements.txt
 
 # Process a single PDF
@@ -124,8 +133,9 @@ python process_pdf.py -i input.pdf -o output.json
 ### Local Testing
 ```bash
 # Test with sample data
+cd challange1a
 docker run --rm \
-  -v $(pwd)/challange1a/sample_dataset/pdfs:/app/input:ro \
+  -v $(pwd)/sample_dataset/pdfs:/app/input:ro \
   -v $(pwd)/test_output:/app/output \
   --network none \
   adoview.pdfprocessor
